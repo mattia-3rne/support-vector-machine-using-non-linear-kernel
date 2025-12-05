@@ -4,7 +4,7 @@
 
 The goal of this project is to demonstrate the mathematical foundation and practical application of the Kernel Trick in Support Vector Machines (SVM).
 
-This project implements two distinct classification scenarios to prove that while linear models are sufficient for simple datasets, complex geometries (like concentric circles) require mapping data into higher-dimensional feature spaces. By using the Radial Basis Function (RBF) kernel, we can construct decision boundaries that are non-linear in the original space but linear in the high-dimensional projection.
+This project implements two distinct classification scenarios to prove that while linear models are sufficient for simple datasets, complex geometries (like concentric circles) require mapping data into higher-dimensional feature spaces. By using the Radial Basis Function (RBF) kernel, we can construct decision boundaries that are nonlinear in the original space but linear in the high-dimensional projection.
 
 ---
 

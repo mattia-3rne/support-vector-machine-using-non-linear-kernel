@@ -1,1 +1,1 @@
-# support-vector-machine-using-non-linear-kernel
+# support-vector-machine-using-nonlinear-kernel

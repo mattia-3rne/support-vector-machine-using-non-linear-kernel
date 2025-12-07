@@ -60,6 +60,7 @@ $$
 $$
 
 Subject to:
+
 $$
 \sum_{i=1}^N \alpha_i y_i = 0, \quad 0 \leq \alpha_i \leq C
 $$

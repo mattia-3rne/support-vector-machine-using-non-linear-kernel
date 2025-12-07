@@ -47,10 +47,16 @@ $$
 This avoids the computationally expensive (and sometimes impossible) step of explicitly calculating the coordinates in the infinite-dimensional space $\mathcal{H}$.
 
 #### The Gram Matrix
-The central mathematical component enabling this is the **Gram Matrix** (or Kernel Matrix), denoted as $G$. This is an $N \times N$ symmetric matrix containing all pairwise kernel evaluations:
+The central mathematical component enabling this is the **Gram Matrix**, denoted as $G$. This is an $N \times N$ symmetric matrix containing all pairwise kernel evaluations. The diagonal elements represent the similarity of a point with itself:
 
 $$
-G_{ij} = K(\mathbf{x}_i, \mathbf{x}_j)
+G =
+\begin{pmatrix}
+K(\mathbf{x}_1, \mathbf{x}_1) & K(\mathbf{x}_1, \mathbf{x}_2) & \cdots & K(\mathbf{x}_1, \mathbf{x}_N) \\
+K(\mathbf{x}_2, \mathbf{x}_1) & K(\mathbf{x}_2, \mathbf{x}_2) & \cdots & K(\mathbf{x}_2, \mathbf{x}_N) \\
+\vdots & \vdots & \ddots & \vdots \\
+K(\mathbf{x}_N, \mathbf{x}_1) & K(\mathbf{x}_N, \mathbf{x}_2) & \cdots & K(\mathbf{x}_N, \mathbf{x}_N)
+\end{pmatrix}
 $$
 
 The SVM dual optimization problem is rewritten entirely in terms of this matrix. We seek to maximize the Lagrangian dual function involving Lagrange multipliers $\alpha$:

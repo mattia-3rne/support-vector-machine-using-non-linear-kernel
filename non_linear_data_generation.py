@@ -8,6 +8,6 @@ X, y = make_circles(n_samples=300, factor=0.5, noise=0.1, random_state=42)
 df = pd.DataFrame(dict(x1=X[:,0], x2=X[:,1], label=y))
 
 # Saving to CSV
-filename = "data_nonlinear.csv"
+filename = "data_non_linear.csv"
 df.to_csv(filename, index=False)
 print(f"Success: {filename} generated.")

@@ -138,9 +138,6 @@ This project does not perform a brute-force comparison of all kernels on all dat
 3.  **Run the Analysis**:
     This project is structured into two independent notebooks. Each notebook handles its own data generation and model training.
     
-    * Open `svm_linear.ipynb` to see the standard linear SVM.
-    * Open `svm_non_linear.ipynb` to see the non-linear kernel implementation.
-
     ```bash
     jupyter notebook
     ```

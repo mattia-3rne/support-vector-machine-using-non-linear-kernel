@@ -1,10 +1,10 @@
-# Support Vector Machine using Nonlinear Kernel
+# Support Vector Machine using non-linear Kernel
 
 ## 📊 Project Overview
 
 The goal of this project is to demonstrate the mathematical foundation and practical application of the Kernel Trick in Support Vector Machines (SVM).
 
-This project implements two distinct classification scenarios to prove that while linear models are sufficient for simple datasets, complex geometries (like concentric circles) require mapping data into higher-dimensional feature spaces. By using the Radial Basis Function (RBF) kernel, we can construct decision boundaries that are nonlinear in the original space but linear in the high-dimensional projection.
+This project implements two distinct classification scenarios to prove that while linear models are sufficient for simple datasets, complex geometries (like concentric circles) require mapping data into higher-dimensional feature spaces. By using the Radial Basis Function (RBF) kernel, we can construct decision boundaries that are non-linear in the original space but linear in the high-dimensional projection.
 
 ---
 
@@ -12,7 +12,7 @@ This project implements two distinct classification scenarios to prove that whil
 
 ### Support Vector Machines
 
-The Support Vector Machine is a supervised learning algorithm that constructs a hyperplane or set of hyperplanes in a high-dimensional or infinite-dimensional space. The goal is to separate classes by a gap that is as wide as possible.
+The Support Vector Machine is a supervised learning algorithm. In the general case of two features, the goal is to find a **line** that separates the two classes by a gap that is as wide as possible. This same logic applies to higher-dimensional data, where the separator becomes a hyperplane.
 
 Given a set of training vectors $\mathbf{x}_i \in \mathbb{R}^p$ and their corresponding target values $y_i \in \{-1, 1\}$, the SVM seeks to find the weight vector $\mathbf{w}$ and bias $b$ that satisfy the following hyperplane equation:
 
@@ -87,13 +87,13 @@ Where:
 
 This project does not perform a brute-force comparison of all kernels on all datasets. Instead, it demonstrates the appropriate application of specific kernels based on the known geometry of the data.
 
-### 1. The Linear Case
+### 1. The linear Case
 * **Dataset**: Two distinct, linearly separable blobs.
 * **Kernel**: `linear`
 * **Mathematical Basis**: $K(\mathbf{x}, \mathbf{x}') = \mathbf{x}^T \mathbf{x}'$
 * **Result**: The SVM successfully builds a straight line boundary $\mathbf{w}^T \mathbf{x} + b = 0$.
 
-### 2. The Nonlinear Case
+### 2. The non-linear Case
 * **Dataset**: Concentric circles.
 * **Kernel**: `rbf`
 * **Mathematical Basis**: Infinite-dimensional projection via Gaussians.
@@ -103,11 +103,11 @@ This project does not perform a brute-force comparison of all kernels on all dat
 
 ## ⚠️ Limitations
 
-| Limitation | Description                                                                                                                                                                                                                     |
-| :--- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **A Priori Knowledge** | This implementation assumes the user knows the geometry of the data beforehand. It does not automatically select the kernel; the choice is hardcoded to the specific problem type.                                              |
+| Limitation | Description |
+| :--- |:---|
+| **A Priori Knowledge** | This implementation assumes the user knows the geometry of the data beforehand. It does not automatically select the kernel; the choice is hardcoded to the specific problem type. |
 | **Computational Complexity** | While the Kernel Trick avoids calculating $\phi(\mathbf{x})$, computing the Gram matrix $K(\mathbf{x}_i, \mathbf{x}_j)$ still scales quadratically with the number of samples $O(n^2)$, making it slow for very large datasets. |
-| **Hyperparameter Sensitivity** | The RBF kernel requires careful tuning of $C$ for regularization and $\gamma$. Incorrect values can easily lead to overfitting or underfitting.                                                                                 |
+| **Hyperparameter Sensitivity** | The RBF kernel requires careful tuning of $C$ for regularization and $\gamma$. Incorrect values can easily lead to overfitting or underfitting. |
 
 ---
 
@@ -121,7 +121,7 @@ This project does not perform a brute-force comparison of all kernels on all dat
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/support-vector-machine-using-nonlinear-kernel.git
+    git clone https://github.com/support-vector-machine-using-non-linear-kernel.git
     ```
 
 2.  **Install dependencies**:
@@ -133,7 +133,7 @@ This project does not perform a brute-force comparison of all kernels on all dat
     This project is structured into two independent notebooks. Each notebook handles its own data generation and model training.
     
     * Open `svm_linear.ipynb` to see the standard linear SVM.
-    * Open `svm_nonlinear.ipynb` to see the non-linear kernel implementation.
+    * Open `svm_non_linear.ipynb` to see the non-linear kernel implementation.
 
     ```bash
     jupyter notebook
@@ -144,8 +144,8 @@ This project does not perform a brute-force comparison of all kernels on all dat
 ## 📂 Project Structure
 
 * `linear_data_generation.py`: Python script for linear data generation.
-* `nonlinear_data_generation.py`: Python script for nonlinear data generation.
+* `non_linear_data_generation.py`: Python script for non_linear data generation.
 * `svm_linear.ipynb`: Notebook implementation of the linear case.
-* `svm_nonlinear.ipynb`: Notebook implementation of the nonlinear case.
+* `svm_non_linear.ipynb`: Notebook implementation of the non_linear case.
 * `requirements.txt`: Python package dependencies.
 * `README.md`: Project documentation.
